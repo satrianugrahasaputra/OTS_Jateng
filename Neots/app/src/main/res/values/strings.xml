@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">New OTS Jateng</string>
+    <string name="templatedashboard">%s %s %s %s %s %s dibandingkan %s</string>
+    <string name="templatedashboardneraca" translatable="false">%s %s %s %s</string>
+    <string name="templatedashboardskm" translatable="false">%s %s %s</string>
+    <string name="series" translatable="false">Series</string>
+    <string name="pilih_tahun">Tahun</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="pilih_bulan">Bulan</string>
+    <string name="excel" translatable="false">Excel</string>
+    <string name="export_selesai">Ekspor Selesai</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="buka">Buka File</string>
+    <string name="indonesia" translatable="false">Indonesia</string>
+    <string name="english" translatable="false">English</string>
+    <string name="sp2020" translatable="false">SP2020</string>
+    <string name="cd_icon" translatable="false">Icon</string>
+    <string name="inflasi_prov">Inflasi Jawa Tengah</string>
+    <string name="inflasi_prov_en">Inflation of Jawa Tengah</string>
+    <string name="inflasi_kelompok">Inflasi Menurut Kelompok</string>
+    <string name="inflasi_kelompok_en">Inflasi of Jawa Tengah by Group of Expenditures</string>
+    <string name="inflasi_penyumbang">Komoditas Penyumbang</string>
+    <string name="inflasi_penyumbang_en">Inflation Main Commodities</string>
+    <string name="inflasi_6_kota">Inflasi 9 Kota</string>
+    <string name="inflasi_6_kota_en">Inflation of 9 Cities</string>
+    <string name="inflasi_ibu_kota">Inflasi Ibu Kota Provinsi</string>
+    <string name="inflasi_ibu_kota_en">Provincial Capital Inflation</string>
+    <string name="ntp_prov">NTP Provinsi</string>
+    <string name="ntp_prov_en">NTP of Jawa Tengah Province</string>
+    <string name="ntp_penyumbang">Komoditas Penyumbang NTP</string>
+    <string name="ntp_penyumbang_en">Share of NTP Commodities</string>
+    <string name="ntp_prov_jawa">NTP Provinsi di Pulau Jawa</string>
+    <string name="ntp_prov_jawa_en">NTP Province in Java Island</string>
+    <string name="NTUP" translatable="false">NTUP</string>
+    <string name="ntp_series">Series NTP dan NTUP</string>
+    <string name="ntp_series_en">NTP and NTUP Series</string>
+    <string name="ekspor_komoditas">Ekspor menurut Komoditas</string>
+    <string name="ekspor_komoditas_en">Export by Commodities</string>
+    <string name="ekspor_pertumbuhan">Pertumbuhan Tertinggi</string>
+    <string name="ekspor_pertumbuhan_en">Highest Growth of Export</string>
+    <string name="ekspor_negara">Negara Tujuan Utama</string>
+    <string name="ekspor_negara_en">Export by Main Destination Countries</string>
+    <string name="ekspor_migas">Migas dan Nonmigas</string>
+    <string name="ekspor_migas_en">Oil and Gas, and Non-Oil and Gas</string>
+    <string name="impor_komoditas">Menurut Komoditas</string>
+    <string name="impor_komoditas_en">Import by Commodities</string>
+    <string name="impor_pertumbuhan">Pertumbuhan Tertinggi</string>
+    <string name="impor_pertumbuhan_en">Highest Growth of Import</string>
+    <string name="impor_negara">Negara Tujuan Utama</string>
+    <string name="impor_negara_en">Import by Main Destination Countries</string>
+    <string name="impor_migas">Migas dan Nonmigas</string>
+    <string name="impor_migas_en">Oil and Gas, and Non-Oil and Gas</string>
+    <string name="pdrb_lu_nominal" translatable="false">Nominal</string>
+    <string name="pdrb_lu_nominal_en" translatable="false">Nominal</string>
+    <string name="pdrb_lu_pertumbuhan">Pertumbuhan</string>
+    <string name="pdrb_lu_pertumbuhan_en">Growth</string>
+    <string name="pdrb_lu_distribusi">Distribusi</string>
+    <string name="pdrb_lu_distribusi_en">Distribution</string>
+    <string name="pdrb_lu_sumber">Sumber Pertumbuhan</string>
+    <string name="pdrb_lu_sumber_en">Source of Economic Growth</string>
+    <string name="pdrb_pengeluaran_nominal" translatable="false">Nominal</string>
+    <string name="pdrb_pengeluaran_nominal_en" translatable="false">Nominal</string>
+    <string name="pdrb_pengeluaran_pertumbuhan">Pertumbuhan</string>
+    <string name="pdrb_pengeluaran_pertumbuhan_en">Growth</string>
+    <string name="pdrb_pengeluaran_sumber">Sumber Pertumbuhan</string>
+    <string name="pdrb_pengeluaran_sumber_en">Source of Economic Growth</string>
+    <string name="pdrb_pengeluaran_distribusi">Distribusi</string>
+    <string name="pdrb_pengeluaran_distribusi_en">Distribution</string>
+    <string name="pdrb_kab_nominal" translatable="false">Nominal</string>
+    <string name="pdrb_kab_nominal_en" translatable="false">Nominal</string>
+    <string name="pdrb_kab_pertumbuhan">Pertumbuhan</string>
+    <string name="pdrb_kab_pertumbuhan_en">Growth</string>
+    <string name="pdrb_kab_distribusi">Distribusi</string>
+    <string name="pdrb_kab_distribusi_en">Distribution</string>
+    <string name="pdrb_kab_perkapita">Perkapita</string>
+    <string name="pdrb_kab_perkapita_en">GRDP per Capita</string>
+    <string name="miskin_prov">Kemiskinan Provinsi</string>
+    <string name="miskin_prov_en">Poverty Rate of Jawa Tengah Province</string>
+    <string name="miskin_kab">Kemiskinan Kabupaten/Kota</string>
+    <string name="miskin_kab_en">Poverty Rate of Regency/Municipality</string>
+    <string name="gini_ratio_prov" translatable="false">Gini Ratio</string>
+    <string name="gini_ratio_prov_series" translatable="false">Series</string>
+    <string name="tpak_prov">TPAK dan TPT</string>
+    <string name="tpak_prov_en">TPAK and TPT</string>
+    <string name="naker_lu_wilayah">Pekerja Menurut Lapangan Usaha dan Wilayah</string>
+    <string name="naker_lu_wilayah_en">Number of Workers by Area and Industrial Origin</string>
+    <string name="naker_lu_jk">Pekerja Menurut Lapangan Usaha dan Jenis Kelamin</string>
+    <string name="naker_lu_jk_en">Number of Workers by Gender and Industrial Origin</string>
+    <string name="tpak_kab">TPAK dan TPT</string>
+    <string name="tpak_kab_en">TPAK and TPT</string>
+    <string name="naker_formal_prov">Pekerja Formal dan Informal</string>
+    <string name="naker_formal_prov_en">Formal and Informal Workers</string>
+    <string name="naker_pendidikan_prov">Pekerja Menurut Pendidikan</string>
+    <string name="naker_pendidikan_prov_en">Number of Workers by Gender and Education</string>
+    <string name="naker_setengah_prov">Setengah Penganggur</string>
+    <string name="naker_setengah_prov_en">Underemployment</string>
+    <string name="ipm_prov_series">Series Nilai IPM</string>
+    <string name="ipm_prov_series_en">Series of Human Developmet Index</string>
+    <string name="ipm_komponen_prov">Komponen IPM</string>
+    <string name="ipm_komponen_prov_en">HDI Components</string>
+    <string name="ipm_perbandingan_prov">Perbandingan IPM</string>
+    <string name="ipm_perbandingan_prov_en">Comparations of Jawa Tengah and National Human Development Index</string>
+    <string name="ipm_kab">Nilai IPM</string>
+    <string name="ipm_kab_en">HDI of Regency/Municipality</string>
+    <string name="ipm_komponen_kab">Komponen IPM</string>
+    <string name="ipm_komponen_kab_en">HDI by Components</string>
+    <string name="ipm_status">Status Pembangunan Manusia</string>
+    <string name="ipm_status_en">Status of Human Development Index</string>
+    <string name="analisis_ringkas">Analisis Ringkas</string>
+    <string name="analisis_ringkas_en">Brief Analysis</string>
+    <string name="iup_title">Indikator Utama Pembangunan Daerah</string>
+    <string name="iup_title_en">Regional Development Main Indicators</string>
+    <string name="iup_subtitle">Provinsi Jawa Tengah</string>
+    <string name="iup_subtitle_en">of Jawa Tengah Province</string>
+    <string name="share_desc">Selengkapnya di Aplikasi OTS Jateng</string>
+    <string name="share_desc_en">More details in OTS Jateng App</string>
+    <string name="share_pada_periode">Pada periode</string>
+    <string name="share_pada_periode_en">In period</string>
+    <string name="share_tercatat">tercatat data sebagai berikut:</string>
+    <string name="share_tercatat_en">recorded data as follows:</string>
+
+    <!-- BANNER SCORES & MAKLUMAT -->
+    <string name="banner_ipkp_label">INDEKS\nPERSEPSI\nKUALITAS\nPELAYANAN</string>
+    <string name="banner_ipkp_label_en">SERVICE\nQUALITY\nPERCEPTION\nINDEX</string>
+    <string name="banner_ipak_label">INDEKS\nPERSEPSI\nANTI\nKORUPSI</string>
+    <string name="banner_ipak_label_en">ANTI\nCORRUPTION\nPERCEPTION\nINDEX</string>
+    <string name="banner_method_note">*dengan Metode KemenPANRB</string>
+    <string name="banner_method_note_en">*using KemenPANRB Method</string>
+    <string name="banner_footer">Hasil Survei Kebutuhan Data di Pelayanan Statistik Terpadu BPS Provinsi Jawa Tengah</string>
+    <string name="banner_footer_en">Result of Data Needs Survey in Integrated Statistical Services of BPS Jawa Tengah Province</string>
+    <string name="maklumat_text_id">Maklumat Dan Standar Pelayanan Statistik Terpadu</string>
+    <string name="maklumat_text_en">Declaration and Standard of Integrated Statistical Services</string>
+    <string name="pdrb">PDRB Lapangan Usaha Provinsi</string>
+    <string name="pdrb_en">GRDP by Industrial Origin of Jawa Tengah</string>
+    <string name="pdrb_pengeluaran">PDRB Pengeluaran Provinsi</string>
+    <string name="pdrb_pengeluaran_en">GRDP by Expenditure of Jawa Tengah</string>
+    <string name="pdrb_kab">PDRB Kabupaten/Kota</string>
+    <string name="pdrb_kab_en">GRDP of Regency/Municipality</string>
+    <string name="skd_prov">Data Provinsi</string>
+    <string name="skd_prov_en">Province Data</string>
+    <string name="skd_kab">Data Kabupaten/Kota</string>
+    <string name="skd_kab_en">Regency/Municipality Data</string>
+    <string name="ikk_kab">Triwulanan</string>
+    <string name="ikk_kab_en">Quarterly</string>
+    <string name="ikk_kab_ann">Hasil Survey Kebutuhan Data di Pelayanan Statistik Terpadu BPS\nTahunan</string>
+    <string name="ikk_kab_ann_en">Result of Data Need Survey BPS\nAnnual</string>
+    <string name="ikk_kab_smt">Semesteran</string>
+    <string name="ikk_kab_smt_en">Semester</string>
+
+    <string name="prov">Provinsi Jawa Tengah</string>
+    <string name="prov_en">Jawa Tengah Province</string>
+    <string name="kab">Kabupaten/Kota</string>
+    <string name="kab_en">Regency/Municipality</string>
+    <string name="bulan">-- Bulan --</string>
+    <string name="tahun">-- Tahun ---</string>
+    <string name="pengaduan">pengaduan</string>
+    <string name="dark_mode">Mode Malam</string>
+    <string name="bahasa">Bahasa</string>
+</resources>

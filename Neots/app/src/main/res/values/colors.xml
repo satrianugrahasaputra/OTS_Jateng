@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primaryColor">#1976d2</color>
+    <color name="primaryLightColor">#63a4ff</color>
+    <color name="primaryDarkColor">#004ba0</color>
+    <color name="secondaryColor">#0097a7</color>
+    <color name="secondaryLightColor">#56c8d8</color>
+    <color name="secondaryDarkColor">#006978</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="accentColor">#002171</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorHeader">#0093DD</color>
+    <color name="colorBPS">#0093DD</color>
+    <color name="bps_maroon">#7B1F22</color>
+
+    <color name="banner_background">#ebebeb</color>
+
+
+    <color name="off_white">#F5F7FA</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="color_linen">#ded4d0</color>
+    <color name="color_ipkp_bg">#963031</color>
+    <color name="color_method_note">#713335</color>
+    <color name="color_triwulan_text">#e1a55f</color>
+    <color name="color_triwulan_bg">#A52A2A</color>
+    <color name="color_grid_border">#dadada</color>
+    <color name="maklumat_bg">#004a9f</color>
+    <color name="maklumat_border">#00000000</color>
+    <color name="maklumat_btn_bg">#FFC107</color>
+    <color name="maklumat_btn_text">#000000</color>
+    
+    <color name="header_bg">#FFFFFF</color>
+    <color name="header_icon">#000000</color>
+    <color name="header_border">#E0E0E0</color>
+
+
+    <!-- Dynamic Colors for Dark Mode Support -->
+    <color name="main_background">@color/off_white</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_stroke_color_dashboard">#00000000</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider_color">#BDBDBD</color>
+    <color name="surface_color">#FAFAFA</color>
+
+    <!-- Indicator Border Colors (matching icon dominant colors) -->
+    <color name="border_inflasi">#DAA520</color>
+    <color name="border_ipm">#FF6B6B</color>
+    <color name="border_ekspor">#1E90FF</color>
+    <color name="border_impor">#2E86AB</color>
+    <color name="border_ntp">#00BFA5</color>
+    <color name="border_kemiskinan">#26C6DA</color>
+    <color name="border_naker">#FF5722</color>
+    <color name="border_gini_ratio">#FFD700</color>
+    <color name="border_neraca">#3F51B5</color>
+    <color name="border_pdrb_prov">#009688</color>
+    <color name="border_skm">#FFA726</color>
+    <color name="border_iup">#FF7043</color>
+    <color name="border_default">#1976d2</color>
+    
+    <!-- Menu List Border Color (transparent for light mode) -->
+    <color name="menu_list_border">#00000000</color>
+    
+    <!-- Info Card Border Color (transparent for light mode) -->
+    <color name="info_card_border">#00000000</color>
+    
+    
+    <!-- Negara Card Border Color (transparent for light mode) -->
+    <color name="negara_card_border">#00000000</color>
+    
+    <!-- IUP List Item Border Color (transparent for light mode) -->
+    <color name="card_border_color">#00000000</color>
+    
+    <!-- Inflation Card Colors -->
+    <!-- Text & UI Colors -->
+    <color name="textPrimary">#333333</color>
+    <color name="dividerColor">#260093DD</color>
+    
+    <!-- Jateng Colors (Teal) -->
+    <color name="bgJateng">#E0F7F6</color>
+    <color name="borderJateng">#33009688</color>
+    <color name="textJatengLabel">#00796B</color>
+    <color name="textJatengValue">#00897B</color>
+    
+    <!-- Nasional Colors (Blue) -->
+    <color name="bgNasional">#E8F0FF</color>
+    <color name="borderNasional">#331976D2</color>
+    <color name="textNasionalLabel">#1565C0</color>
+    <color name="textNasionalValue">#1976D2</color>
+    <color name="bg_abu">#F5F5F5</color>
+</resources>

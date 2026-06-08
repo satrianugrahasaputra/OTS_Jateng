@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/pengaduan"
+        app:showAsAction="ifRoom"
+        android:title="@string/pengaduan"
+        android:icon="@drawable/pengaduan">
+    </item>
+    <item
+        android:id="@+id/dark_mode"
+        app:showAsAction="ifRoom"
+        android:title="@string/dark_mode"
+        android:icon="@drawable/ic_dark_mode">
+    </item>
+
+    <item
+        android:id="@+id/bahasa"
+        app:showAsAction="ifRoom"
+        android:title="@string/bahasa"
+        android:icon="@drawable/lang">
+
+        <menu>
+            <item
+                android:id="@+id/menuIndo"
+                android:title="@string/indonesia"/>
+
+            <item
+                android:id="@+id/menuEng"
+                android:title="@string/english"/>
+        </menu>
+    </item>
+</menu>

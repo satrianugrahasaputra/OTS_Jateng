@@ -1,0 +1,927 @@
+/* Modern Table Styling for OTS Jateng - Light & Dark Mode Support */
+
+/* ===== LIGHT MODE (Default) ===== */
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Container for the table with horizontal scroll */
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Removed extra margin-right to balance with body padding */
+    width: 100%;
+}
+
+/* Table styling */
+.tabel {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: max-content;
+    min-width: 100%;
+    background: #FFFFFF;
+}
+
+/* Sticky Column Class - Only applied to actual first column cells */
+.col-sticky {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    min-width: 80px;
+    max-width: 140px;
+    width: fit-content;
+    white-space: normal !important;
+    /* Allow text wrapping */
+    vertical-align: middle;
+}
+
+/* Special z-index for header sticky to stay on top of body sticky */
+.header-sticky {
+    position: sticky;
+    left: 0;
+    z-index: 20;
+    min-width: 80px;
+    max-width: 140px;
+    width: fit-content;
+    white-space: normal !important;
+    vertical-align: middle;
+    border-right: 3px solid #0077B3 !important;
+}
+
+/* Section header - sticky both vertically and horizontally for group headers */
+.section-header {
+    position: sticky !important;
+    top: 56px !important;
+    /* Height of main table header */
+    left: 0 !important;
+    z-index: 18 !important;
+    background: rgb(220, 235, 250) !important;
+    font-weight: bold;
+    color: #1976D2;
+    padding: 12px 16px;
+    min-width: 100px;
+    max-width: 200px;
+    width: fit-content;
+    white-space: normal;
+}
+
+/* Row labels */
+.vervar {
+    background: rgb(238, 238, 238);
+    border: none;
+    border-right: 1px solid #E0E0E0;
+    border-bottom: 2px solid #CCCCCC;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    white-space: nowrap;
+}
+
+/* Row labels bold */
+.vervar1 {
+    background: rgb(220, 235, 250);
+    border: none;
+    border-right: 1px solid #E0E0E0;
+    border-bottom: 2px solid #CCCCCC;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1976D2;
+    white-space: nowrap;
+}
+
+/* Apply specific border to sticky columns for visual separation */
+.col-sticky.vervar,
+.col-sticky.vervar1 {
+    border-right: 3px solid #CCCCCC;
+}
+
+/* Data cells */
+.datacell {
+    background: #FFFFFF;
+    border: none;
+    border-right: 2px solid #E0E0E0;
+    border-bottom: 2px solid #E0E0E0;
+    padding: 12px 20px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1976D2;
+    white-space: nowrap;
+}
+
+.datacellHuruf {
+    background: #FFFFFF;
+    border: none;
+    border-right: 2px solid #E0E0E0;
+    border-bottom: 2px solid #E0E0E0;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    white-space: nowrap;
+}
+
+/* Header styling */
+.header-tabel {
+    background: rgb(0, 147, 221);
+    border: none;
+    border-right: 2px solid #0077B3;
+    border-bottom: 2px solid #0077B3;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 14px 16px;
+    text-align: center;
+    white-space: normal;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 80px;
+    max-width: 250px;
+}
+
+/* Remove right border from last cell in each row */
+tr td:last-child,
+tr th:last-child,
+.datacell:last-child,
+.header-tabel:last-child {
+    border-right: none;
+}
+
+/* Remove bottom border from last row */
+tr:last-child td,
+tr:last-child .vervar,
+tr:last-child .vervar1,
+tr:last-child .datacell,
+tr:last-child .datacellHuruf {
+    border-bottom: none;
+}
+
+/* Rounded corners for table */
+/* Note: sticky headers might act weird with border-radius on container, but table-container handles it */
+.tabel tr:first-child td:first-child,
+.tabel tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.tabel tr:first-child td:last-child,
+.tabel tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.tabel tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.tabel tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+/* Shadow effect for sticky column */
+.col-sticky::after,
+.header-sticky::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -6px;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent);
+    pointer-events: none;
+}
+
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+    }
+
+    .table-container {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .tabel {
+        background-color: #1E1E1E;
+    }
+
+    .vervar {
+        background: #2D2D2D;
+        border-right-color: #555555;
+        border-bottom-color: #424242;
+        color: #E0E0E0;
+    }
+
+    .vervar1 {
+        background: #1E3A5F;
+        border-right-color: #555555;
+        border-bottom-color: #424242;
+        color: #64B5F6;
+    }
+
+    .col-sticky.vervar,
+    .col-sticky.vervar1 {
+        border-right-color: #555555;
+    }
+
+    .datacell {
+        background: #1E1E1E;
+        border-right-color: #424242;
+        border-bottom-color: #424242;
+        color: #64B5F6;
+    }
+
+    .datacellHuruf {
+        background: #1E1E1E;
+        border-right-color: #424242;
+        border-bottom-color: #424242;
+        color: #E0E0E0;
+    }
+
+    .header-tabel {
+        background: #1565C0;
+        border-right-color: #0D47A1;
+        border-bottom-color: #0D47A1;
+        color: white;
+    }
+
+    .header-sticky {
+        border-right-color: #0D47A1 !important;
+    }
+
+    .section-header {
+        background: #1E3A5F !important;
+        color: #64B5F6;
+    }
+
+    .col-sticky::after,
+    .header-sticky::after {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+    }
+}
+
+/* Manual dark mode via body class (fallback if media query doesn't work) */
+body.dark-mode {
+    background-color: #121212;
+}
+
+body.dark-mode .table-container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .tabel {
+    background-color: #1E1E1E;
+}
+
+body.dark-mode .vervar {
+    background: #2D2D2D;
+    border-right-color: #555555;
+    border-bottom-color: #424242;
+    color: #E0E0E0;
+}
+
+body.dark-mode .vervar1 {
+    background: #1E3A5F;
+    border-right-color: #555555;
+    border-bottom-color: #424242;
+    color: #64B5F6;
+}
+
+body.dark-mode .col-sticky.vervar,
+body.dark-mode .col-sticky.vervar1 {
+    border-right-color: #555555;
+}
+
+body.dark-mode .datacell {
+    background: #1E1E1E;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    color: #64B5F6;
+}
+
+body.dark-mode .datacellHuruf {
+    background: #1E1E1E;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    color: #E0E0E0;
+}
+
+body.dark-mode .header-tabel {
+    background: #1565C0;
+    border-right-color: #0D47A1;
+    border-bottom-color: #0D47A1;
+    color: white;
+}
+
+body.dark-mode .header-sticky {
+    border-right-color: #0D47A1 !important;
+}
+
+body.dark-mode .section-header {
+    background: #1E3A5F !important;
+    color: #64B5F6;
+}
+
+body.dark-mode .col-sticky::after,
+body.dark-mode .header-sticky::after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* ===== INFLATION CARD STYLES ===== */
+
+/* Container for inflation cards */
+.inflation-container {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Main title card with gradient */
+.inflation-header {
+    background: linear-gradient(135deg, #0093DD 0%, #00B4D8 50%, #48CAE4 100%);
+    border-radius: 16px;
+    padding: 20px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 147, 221, 0.3);
+    margin-bottom: 8px;
+}
+
+.inflation-header h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inflation-header .period {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Individual metric card */
+.metric-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 147, 221, 0.1);
+    animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.metric-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.metric-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.metric-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* Metric title */
+.metric-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(0, 147, 221, 0.15);
+}
+
+.metric-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #0093DD 0%, #00B4D8 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.metric-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Values container */
+.values-row {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+/* Individual value box */
+.value-box {
+    flex: 1;
+    background: linear-gradient(145deg, #f0f7ff 0%, #e8f4ff 100%);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid rgba(0, 147, 221, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.value-box.jateng {
+    background: linear-gradient(145deg, #e0f7f6 0%, #d0f0f0 100%);
+    border-color: rgba(0, 150, 136, 0.2);
+}
+
+.value-box.nasional {
+    background: linear-gradient(145deg, #e8f0ff 0%, #dce8ff 100%);
+    border-color: rgba(25, 118, 210, 0.2);
+}
+
+.value-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.value-box.jateng .value-label {
+    color: #00796B;
+}
+
+.value-box.nasional .value-label {
+    color: #1565C0;
+}
+
+.value-number {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.value-box.jateng .value-number {
+    color: #00897B;
+}
+
+.value-box.nasional .value-number {
+    color: #1976D2;
+}
+
+/* Comparison bar */
+.comparison-bar {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.comparison-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s ease-out;
+}
+
+.value-box.jateng .comparison-fill {
+    background: linear-gradient(90deg, #26A69A 0%, #4DB6AC 100%);
+}
+
+.value-box.nasional .comparison-fill {
+    background: linear-gradient(90deg, #1976D2 0%, #42A5F5 100%);
+}
+
+/* Value unit */
+.value-unit {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+/* VS indicator between cards */
+.vs-badge {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: #666;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+/* Footer note */
+.inflation-footer {
+    text-align: center;
+    padding: 12px;
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* ===== DARK MODE FOR INFLATION CARDS ===== */
+@media (prefers-color-scheme: dark) {
+    .inflation-header {
+        background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #0277BD 100%);
+        box-shadow: 0 4px 20px rgba(21, 101, 192, 0.4);
+    }
+
+    .metric-card {
+        background: linear-gradient(145deg, #1E1E1E 0%, #252525 100%);
+        border-color: rgba(100, 181, 246, 0.2);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .metric-title {
+        border-bottom-color: rgba(100, 181, 246, 0.2);
+    }
+
+    .metric-icon {
+        background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%);
+    }
+
+    .metric-name {
+        color: #E0E0E0;
+    }
+
+    .value-box {
+        background: linear-gradient(145deg, #2D2D2D 0%, #333333 100%);
+        border-color: rgba(100, 181, 246, 0.15);
+    }
+
+    .value-box.jateng {
+        background: linear-gradient(145deg, #1E3A3A 0%, #253D3D 100%);
+        border-color: rgba(77, 182, 172, 0.25);
+    }
+
+    .value-box.nasional {
+        background: linear-gradient(145deg, #1E2A3A 0%, #253545 100%);
+        border-color: rgba(66, 165, 245, 0.25);
+    }
+
+    .value-box.jateng .value-label {
+        color: #4DB6AC;
+    }
+
+    .value-box.nasional .value-label {
+        color: #64B5F6;
+    }
+
+    .value-box.jateng .value-number {
+        color: #4DB6AC;
+    }
+
+    .value-box.nasional .value-number {
+        color: #64B5F6;
+    }
+
+    .comparison-bar {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .vs-badge {
+        background: #333;
+        color: #aaa;
+    }
+
+    .inflation-footer {
+        color: #888;
+    }
+}
+
+/* Manual dark mode class for inflation cards */
+body.dark-mode .inflation-header {
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #0277BD 100%);
+    box-shadow: 0 4px 20px rgba(21, 101, 192, 0.4);
+}
+
+body.dark-mode .metric-card {
+    background: linear-gradient(145deg, #1E1E1E 0%, #252525 100%);
+    border-color: rgba(100, 181, 246, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .metric-title {
+    border-bottom-color: rgba(100, 181, 246, 0.2);
+}
+
+body.dark-mode .metric-icon {
+    background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%);
+}
+
+body.dark-mode .metric-name {
+    color: #E0E0E0;
+}
+
+body.dark-mode .value-box {
+    background: linear-gradient(145deg, #2D2D2D 0%, #333333 100%);
+    border-color: rgba(100, 181, 246, 0.15);
+}
+
+body.dark-mode .value-box.jateng {
+    background: linear-gradient(145deg, #1E3A3A 0%, #253D3D 100%);
+    border-color: rgba(77, 182, 172, 0.25);
+}
+
+body.dark-mode .value-box.nasional {
+    background: linear-gradient(145deg, #1E2A3A 0%, #253545 100%);
+    border-color: rgba(66, 165, 245, 0.25);
+}
+
+body.dark-mode .value-box.jateng .value-label {
+    color: #4DB6AC;
+}
+
+body.dark-mode .value-box.nasional .value-label {
+    color: #64B5F6;
+}
+
+body.dark-mode .value-box.jateng .value-number {
+    color: #4DB6AC;
+}
+
+body.dark-mode .value-box.nasional .value-number {
+    color: #64B5F6;
+}
+
+body.dark-mode .comparison-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .vs-badge {
+    background: #333;
+    color: #aaa;
+}
+
+body.dark-mode .inflation-footer {
+    color: #888;
+}
+
+/* ===== KOMODITAS PENYUMBANG STYLES ===== */
+
+/* Main container for komoditas section */
+.komoditas-container {
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Section card (Inflasi or Deflasi) */
+.komoditas-section {
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeInUp 0.4s ease-out;
+}
+
+/* Section header - gradient */
+.section-header-inflasi {
+    background: linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%);
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.section-header-deflasi {
+    background: linear-gradient(135deg, #F97316 0%, #EA580C 50%, #C2410C 100%);
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.section-header-inflasi h2,
+.section-header-deflasi h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header-inflasi .period,
+.section-header-deflasi .period {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Column header row */
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: linear-gradient(180deg, #F3F4F6 0%, #E5E7EB 100%);
+    border-bottom: 2px solid #D1D5DB;
+}
+
+.column-header span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.column-header .col-name {
+    flex: 1;
+}
+
+.column-header .col-value {
+    width: 80px;
+    text-align: right;
+}
+
+/* Commodity items container */
+.komoditas-items {
+    padding: 8px 0;
+}
+
+/* Individual commodity item */
+.komoditas-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 4px 12px;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F9FAFB 100%);
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.komoditas-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Ranking badge */
+.ranking-badge {
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.ranking-badge.inflasi {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.ranking-badge.deflasi {
+    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+}
+
+/* Commodity name */
+.komoditas-name {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F2937;
+}
+
+/* Value container */
+.komoditas-value {
+    min-width: 70px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.komoditas-value.positive {
+    color: #059669;
+}
+
+.komoditas-value.negative {
+    color: #DC2626;
+}
+
+/* Progress bar for value magnitude */
+.komoditas-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    border-radius: 0 0 12px 12px;
+    transition: width 0.6s ease-out;
+}
+
+.komoditas-progress.inflasi {
+    background: linear-gradient(90deg, #10B981 0%, #6EE7B7 100%);
+}
+
+.komoditas-progress.deflasi {
+    background: linear-gradient(90deg, #F97316 0%, #FDBA74 100%);
+}
+
+/* ===== DARK MODE FOR KOMODITAS ===== */
+@media (prefers-color-scheme: dark) {
+    .komoditas-section {
+        background: #1E1E1E;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .section-header-inflasi {
+        background: linear-gradient(135deg, #065F46 0%, #047857 50%, #059669 100%);
+    }
+
+    .section-header-deflasi {
+        background: linear-gradient(135deg, #9A3412 0%, #C2410C 50%, #EA580C 100%);
+    }
+
+    .column-header {
+        background: linear-gradient(180deg, #2D2D2D 0%, #252525 100%);
+        border-bottom-color: #404040;
+    }
+
+    .column-header span {
+        color: #D1D5DB;
+    }
+
+    .komoditas-item {
+        background: linear-gradient(145deg, #252525 0%, #1E1E1E 100%);
+        border-color: #404040;
+    }
+
+    .komoditas-name {
+        color: #E5E7EB;
+    }
+
+    .komoditas-value.positive {
+        color: #6EE7B7;
+    }
+
+    .komoditas-value.negative {
+        color: #FCA5A5;
+    }
+}
+
+/* Manual dark mode class */
+body.dark-mode .komoditas-section {
+    background: #1E1E1E;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .section-header-inflasi {
+    background: linear-gradient(135deg, #065F46 0%, #047857 50%, #059669 100%);
+}
+
+body.dark-mode .section-header-deflasi {
+    background: linear-gradient(135deg, #9A3412 0%, #C2410C 50%, #EA580C 100%);
+}
+
+body.dark-mode .column-header {
+    background: linear-gradient(180deg, #2D2D2D 0%, #252525 100%);
+    border-bottom-color: #404040;
+}
+
+body.dark-mode .column-header span {
+    color: #D1D5DB;
+}
+
+body.dark-mode .komoditas-item {
+    background: linear-gradient(145deg, #252525 0%, #1E1E1E 100%);
+    border-color: #404040;
+}
+
+body.dark-mode .komoditas-name {
+    color: #E5E7EB;
+}
+
+body.dark-mode .komoditas-value.positive {
+    color: #6EE7B7;
+}
+
+body.dark-mode .komoditas-value.negative {
+    color: #FCA5A5;
+}

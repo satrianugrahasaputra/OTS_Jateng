@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header Card: IPKP & IPAK Scores -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_header_scores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/primaryColor">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <!-- IPKP Section -->
+                    <TextView
+                        android:id="@+id/tv_ipkp_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="IPKP"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:alpha="0.9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/divider_vertical"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_ipkp_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="3.9112"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/divider_vertical"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ipkp_label"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_ipkp_subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Indeks Perilaku Ketidakpedutian Publik"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:alpha="0.8"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/divider_vertical"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ipkp_value"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Vertical Divider -->
+                    <View
+                        android:id="@+id/divider_vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/white"
+                        android:alpha="0.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <!-- IPAK Section -->
+                    <TextView
+                        android:id="@+id/tv_ipak_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="IPAK"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:alpha="0.9"
+                        app:layout_constraintStart_toEndOf="@id/divider_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_ipak_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="3.9112"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        app:layout_constraintStart_toEndOf="@id/divider_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ipak_label"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_ipak_subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Indeks Perilaku Anti Korupsi"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:alpha="0.8"
+                        android:gravity="center"
+                        app:layout_constraintStart_toEndOf="@id/divider_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ipak_value"
+                        android:layout_marginTop="4dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Section Title -->
+            <TextView
+                android:id="@+id/tv_section_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Indikator Statistik"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Statistics RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_stat_indicator"
+                tools:itemCount="5"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- FAB for LATIFA Chatbot -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_latifa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="LATIFA"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/logo_latifa"
+        app:iconTint="@null"
+        app:backgroundTint="#e28743"
+        app:elevation="12dp"
+        app:pressedTranslationZ="12dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors for Dark Mode -->
+    <color name="primaryColor">#90CAF9</color>
+    <color name="primaryLightColor">#E3F2FD</color>
+    <color name="primaryDarkColor">#42A5F5</color>
+    <color name="secondaryColor">#4DD0E1</color>
+    <color name="secondaryLightColor">#80DEEA</color>
+    <color name="secondaryDarkColor">#26C6DA</color>
+    <color name="primaryTextColor">#FFFFFF</color>
+    <color name="secondaryTextColor">#E0E0E0</color>
+    <color name="accentColor">#82B1FF</color>
+
+    <color name="colorWhite">#121212</color>
+    <color name="colorHeader">#47B5FF</color>
+    <color name="colorBPS">#47B5FF</color>
+
+    <!-- Dynamic Colors for Dark Mode -->
+    <color name="main_background">#121212</color>
+    <color name="card_background">#1E1E1E</color>
+    <color name="banner_background">#1E1E1E</color>
+    <color name="card_stroke_color_dashboard">#1FFFFFFF</color>
+    <color name="color_grid_border">#1FFFFFFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="maklumat_bg">#1E1E1E</color>
+    <color name="maklumat_border">#1FFFFFFF</color>
+    
+    <color name="header_bg">#121212</color>
+    <color name="header_icon">#FFFFFF</color>
+    <color name="header_border">#333333</color>
+
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="divider_color">#424242</color>
+    <color name="surface_color">#1E1E1E</color>
+    
+    <!-- Menu List Border Color for Dark Mode -->
+    <color name="menu_list_border">#DFF6FF</color>
+    
+    <!-- Info Card Border Color for Dark Mode -->
+    <color name="info_card_border">#FFFBDE</color>
+    
+    
+    <!-- Negara Card Border Color for Dark Mode -->
+    <color name="negara_card_border">#A0DEFF</color>
+    
+    <!-- IUP List Item Border Color for Dark Mode -->
+    <color name="card_border_color">#A0DEFF</color>
+    
+    <!-- Inflation Card Colors (Dark Mode) -->
+    <!-- Text & UI Colors -->
+    <color name="textPrimary">#E0E0E0</color>
+    <color name="dividerColor">#3364B5F6</color>
+    
+    <!-- Jateng Colors (Teal Dark) -->
+    <color name="bgJateng">#1E3A3A</color>
+    <color name="borderJateng">#404DB6AC</color>
+    <color name="textJatengLabel">#4DB6AC</color>
+    <color name="textJatengValue">#4DB6AC</color>
+    
+    <!-- Nasional Colors (Blue Dark) -->
+    <color name="bgNasional">#1E2A3A</color>
+    <color name="borderNasional">#4064B5F6</color>
+    <color name="textNasionalLabel">#64B5F6</color>
+    <color name="textNasionalValue">#64B5F6</color>
+</resources>

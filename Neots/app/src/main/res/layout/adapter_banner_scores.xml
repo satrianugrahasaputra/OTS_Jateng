@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_header_scores"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/banner_background"
+    app:strokeColor="@color/color_grid_border"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- CONTENT CONTAINER -->
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" 
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- HEADERS ROW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <!-- IPKP HEADER (RATA KANAN) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="end"
+                    android:paddingEnd="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_ipkp_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INDEKS\nPERSEPSI\nKUALITAS\nPELAYANAN"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:fontFamily="sans-serif-black"
+                        android:lineSpacingMultiplier="0.8"/>
+
+                    <TextView
+                        android:id="@+id/tv_ipkp_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IPKP"
+                        android:textColor="@color/bps_maroon"
+                        android:textSize="48sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="-10dp"/>
+                </LinearLayout>
+
+                <!-- IPAK HEADER (RATA KIRI) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:paddingStart="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_ipak_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INDEKS\nPERSEPSI\nANTI\nKORUPSI"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:fontFamily="sans-serif-black"
+                        android:lineSpacingMultiplier="0.8"/>
+
+                    <TextView
+                        android:id="@+id/tv_ipak_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IPAK"
+                        android:textColor="@color/bps_maroon"
+                        android:textSize="48sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="-10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- METHOD NOTE (Centered) -->
+            <TextView
+                android:id="@+id/tv_method_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*dengan Metode KemenPANRB"
+                android:textColor="@color/color_method_note"
+                android:textSize="9sp"
+                android:gravity="center"
+                android:layout_marginTop="-6dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- SCORES ROW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="top">
+
+                <!-- IPKP SCORE & STATUS (RATA KANAN) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="end"
+                    android:paddingEnd="8dp">
+
+                    <!-- WRAPPER TO CENTER CONTENT RELATIVE TO EACH OTHER -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- PILL CONTAINER (Updated COLOR) -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/color_ipkp_bg"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            
+                            <TextView
+                                android:id="@+id/tv_ipkp_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3,8058"
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:paddingHorizontal="20dp"
+                                android:paddingVertical="6dp"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/tv_ipkp_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(Sangat Baik)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                
+                <!-- VERTICAL DIVIDER -->
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="50dp"
+                    android:background="@color/bps_maroon"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- IPAK SCORE & STATUS (RATA KIRI) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:paddingStart="8dp">
+
+                    <!-- WRAPPER TO CENTER CONTENT RELATIVE TO EACH OTHER -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- PILL CONTAINER -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/bps_maroon"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            
+                            <TextView
+                                android:id="@+id/tv_ipak_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3,9180"
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:paddingHorizontal="20dp"
+                                android:paddingVertical="6dp"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/tv_ipak_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(Sangat Baik)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- FOOTER TEXT (Moved Up) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bps_maroon"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/content_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="-4dp">
+            
+            <TextView
+                android:id="@+id/tv_footer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil Survei Kebutuhan Data di Pelayanan Statistik Terpadu BPS Provinsi Jawa Tengah"
+                android:textColor="@android:color/white"
+                android:textSize="9sp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- TRIWULAN TAG (Separated from Footer) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/color_triwulan_bg"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/card_footer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp">
+            
+            <TextView
+                android:id="@+id/tv_period_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Triwulan IV 2025"
+                android:textColor="@color/color_triwulan_text"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="3dp"/>
+        </androidx.cardview.widget.CardView>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

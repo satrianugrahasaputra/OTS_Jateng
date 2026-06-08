@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <!-- HEADER CUSTOM -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header_bg"
+        android:elevation="0dp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="12dp"
+        android:stateListAnimator="@null">
+
+        <!-- Title Section (Left) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/img_header_logo"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/logo_ots"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTS Jateng"
+                android:textColor="@color/header_icon"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-black"/>
+        </LinearLayout>
+
+        <!-- Icons Section (Right) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Headset Icon -->
+            <ImageView
+                android:id="@+id/btn_header_call"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_message_alert"
+                app:tint="@color/header_icon"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <!-- Theme Toggle Icon (Sun/Moon) -->
+            <ImageView
+                android:id="@+id/btn_header_theme"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_wb_sunny"
+                app:tint="@color/header_icon"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <!-- Language Toggle (ID/EN) -->
+            <TextView
+                android:id="@+id/btn_header_lang"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="ID"
+                android:textColor="@color/header_icon"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/shape_lang_circle"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- CONTENT -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_custom">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/prgBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <!-- LATIFA Chat Button with Circular Background -->
+    <FrameLayout
+        android:id="@+id/latifaContainer"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="-20dp"
+        android:layout_marginBottom="-10dp">
+
+        <!-- Circular Orange Background (CardView) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#e28743"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="12dp"
+            app:strokeWidth="0dp" />
+
+        <!-- LATIFA Icon -->
+        <ImageView
+            android:id="@+id/fabLatifa"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:contentDescription="LATIFA Chat Assistant"
+            android:src="@drawable/logo_latifa"
+            android:scaleType="fitCenter"
+            android:elevation="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+    </FrameLayout>
+
+</RelativeLayout>

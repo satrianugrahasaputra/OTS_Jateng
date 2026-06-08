@@ -1,0 +1,196 @@
+    <!-- ROOT: CoordinatorLayout for Scrolling Behavior -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailKonten"
+        android:background="@color/main_background">
+
+        <!-- APP BAR: Fixed Header (Action Bar) -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp">
+
+            <!-- Custom Header (Main Action Bar) - Pinned -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/header_bg"
+                android:elevation="2dp"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="12dp"
+                app:layout_scrollFlags="noScroll">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_back_white_24dp"
+                    app:tint="@color/header_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- New Action Buttons Container -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/btn_excel"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/excel"
+                        app:tint="@color/header_icon"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                    <ImageView
+                        android:id="@+id/btn_share"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_menu_share"
+                        app:tint="@color/header_icon"
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/header_border"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- SCROLLING CONTENT: Title + Year + WebView + Graph -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <!-- Title and Year Selection -->
+                <LinearLayout
+                    android:id="@+id/ll_title_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@color/main_background">
+
+                    <TextView
+                        android:id="@+id/tv_main_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Judul Konten"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="sans-serif-black"/>
+
+                    <TextView
+                        android:id="@+id/btn_year_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_year_pill" 
+                        android:drawableStart="@drawable/ic_calendar_white"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="2025 ▼"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:drawableTint="#FFFFFF"/>
+
+                </LinearLayout>
+
+                <!-- WebView for data table -->
+                <!-- Use wrap_content height to scroll with parent -->
+                <LinearLayout
+                    android:id="@+id/llKonten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="0dp">
+                    
+                    <WebView
+                        android:id="@+id/wvKonten"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" 
+                        android:minHeight="200dp"/>
+                </LinearLayout>
+
+                <!-- Chart container with hint text -->
+                 <LinearLayout
+                    android:id="@+id/chartContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/tvChartHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Geser grafik untuk melihat visualisasi lainnya"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        android:gravity="end" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp" />
+
+                </LinearLayout>
+
+                <!-- Progress Bar at bottom or center? Usually center of screen. -->
+                <!-- Since we have NestedScrollView, centering relative to parent is better -->
+                
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Progress Bar centered in the CoordinatorLayout -->
+        <ProgressBar
+            android:id="@+id/prgBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always"
+        android:title=""
+        android:icon="@drawable/ic_more">
+        <menu>
+            <item
+                android:id="@+id/menuTahun"
+                android:title="@string/pilih_tahun"
+                android:visible="false"/>
+
+            <item
+                android:id="@+id/menuSeries"
+                android:title="@string/series"
+                android:visible="false"/>
+
+            <item
+                android:id="@+id/menuExcel"
+                android:title="@string/excel"
+                android:visible="false"/>
+            <item
+                android:id="@+id/menuShare"
+                android:title="@string/bagikan"
+                android:visible="false"/>
+        </menu>
+    </item>
+</menu>

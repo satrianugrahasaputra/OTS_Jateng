@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Komoditas Column Header - Column labels for Komoditas and Andil -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="10dp"
+    android:layout_marginHorizontal="12dp"
+    android:background="@color/surface_color">
+
+    <!-- Spacer for rank badge -->
+    <View
+        android:layout_width="32dp"
+        android:layout_height="1dp" />
+
+    <!-- Komoditas label -->
+    <TextView
+        android:id="@+id/txtColKomoditas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:text="Komoditas"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_secondary"
+        android:textAllCaps="true"
+        android:letterSpacing="0.05" />
+
+    <!-- Andil label -->
+    <TextView
+        android:id="@+id/txtColAndil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Andil"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_secondary"
+        android:textAllCaps="true"
+        android:letterSpacing="0.05" />
+
+</LinearLayout>

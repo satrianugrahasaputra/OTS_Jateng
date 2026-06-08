@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "495454421285",
+    "firebase_url": "https://ots-jawa-tengah.firebaseio.com",
+    "project_id": "ots-jawa-tengah",
+    "storage_bucket": "ots-jawa-tengah.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495454421285:android:494dd25696053958921acc",
+        "android_client_info": {
+          "package_name": "com.ionicframework.otsjateng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495454421285-opjmip61uq8rln30ldfqr3q61pug0fe7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQFR2ogxzBQLN-o9F9hV5KWE3zvYz5F3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495454421285-opjmip61uq8rln30ldfqr3q61pug0fe7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
